@@ -7,8 +7,6 @@ This repository contains a Python program to classify spin states in **first-row
 
 ---
 
-## Features
-
 ### 1. Extracting and Analyzing Data
 - Reads an input specifying:
   - Target metal ion
@@ -17,7 +15,7 @@ This repository contains a Python program to classify spin states in **first-row
 - Builds a dataset from the **OMOL25 dataset** (~4 million structures)
 - Converts molecular structures into **SOAP descriptors** using the [DSCRIBE](https://singroup.github.io/dscribe/latest/) library
 - Preprocesses data:
-  - Scaling features
+  - Normalizing SOAP data
   - Splitting into training and test sets (customizable percentage)
 - Performs exploratory data analysis:
   - **PCA** (Principal Component Analysis)
