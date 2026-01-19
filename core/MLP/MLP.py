@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv1D, MaxPooling1D, Flatten, Dense, Dropout, BatchNormalization
+from tensorflow.keras.layers import  Flatten, Dense, Dropout, BatchNormalization
 from tensorflow.keras.regularizers import l2
 from tensorflow.keras.callbacks import EarlyStopping
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, roc_curve, auc
