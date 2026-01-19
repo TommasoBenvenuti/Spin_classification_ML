@@ -1,6 +1,6 @@
 # Spin Classification in Metal Complexes Using Data-Driven Techniques
 
-High-performance computing (HPC) techniques for spin-state classification in inorganic complexes are computationally demanding. Recently, machine learning approaches have emerged as efficient alternatives for this task ([ACS JPCA exemple ](https://pubs.acs.org/doi/10.1021/acs.jpca.0c01458)).
+High-performance computing (HPC) techniques for spin-state classification in inorganic complexes are computationally demanding. Recently, machine learning approaches have emerged as efficient alternatives for this task ([ACS JPCA exemple](https://pubs.acs.org/doi/10.1021/acs.jpca.0c01458)).
 
 
 This repository contains a Python program to classify spin states in **first-row transition metal complexes** using machine learning techniques.
