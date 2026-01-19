@@ -24,10 +24,8 @@ def Multi_Layer_Perceptron(X_train, y_train, X_test, y_test, OUT_DIR):
         y_test: Etichette di test (eg stati di spin)
         OUT_DIR: Cartella di output per salvare i risultati
     """
-    # -------------------------
-    # Modello MLP
-    # -------------------------
 
+    # Modello MLP
     reg = l2(1e-4)
 
     model = Sequential([Flatten(input_shape=(X_train.shape[1], ))])
@@ -58,9 +56,7 @@ def Multi_Layer_Perceptron(X_train, y_train, X_test, y_test, OUT_DIR):
         callbacks=[early_stopping]
     )
 
-    # -------------------------
     # Plot accuracy/loss
-    # -------------------------
     plt.figure()
     plt.plot(hist.history['accuracy'], label='Training Accuracy')
     plt.plot(hist.history['val_accuracy'], label='Validation Accuracy')
@@ -82,7 +78,7 @@ def Multi_Layer_Perceptron(X_train, y_train, X_test, y_test, OUT_DIR):
 
     # -------------------------
     # Confusion Matrix
-    # ----------------------:---
+    
     # sono binari 0/1 quindi si dovrebbe poter fare
     y_pred_prob = model.predict(X_test).ravel()
     y_pred = (y_pred_prob > 0.5).astype(int)
@@ -105,9 +101,7 @@ def Multi_Layer_Perceptron(X_train, y_train, X_test, y_test, OUT_DIR):
     plt.savefig(os.path.join(OUT_DIR, "confusion_matrix.png"))
     plt.close()
 
-    # -------------------------
-    # ROC curve + AUC
-    # -------------------------
+--
     fpr, tpr, thresholds = roc_curve(y_test, y_pred_prob)
     roc_auc = auc(fpr, tpr)
 
