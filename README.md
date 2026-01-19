@@ -34,7 +34,7 @@ This repository contains a Python program to classify spin states in **first-row
 
 ### 3. Multi-Layer Perceptron (MLP)
 - Performs spin-state classification using an **MLP**
-- Highly regularized architecture due to small datasets
+- Highly regularized architecture due to small dataset
 - Can work on **PCA-reduced data**
 - Supports **class-balanced training** (undersampling majority class)
 
