@@ -12,7 +12,7 @@ This repository contains a Python program to classify spin states in **first-row
   - Target metal ion
   - Spin states
   - Coordination number (4, 5, or 6)
-- Builds a dataset 'distilling' **OMOL25 dataset** (~4 million structures) [OMOL25](https://huggingface.co/facebook/OMol25)
+- Builds a dataset 'distilling' [OMOL25](https://huggingface.co/facebook/OMol25) **dataset** (~4 million structures) 
 - Converts molecular structures into **SOAP descriptors** using the [DSCRIBE](https://singroup.github.io/dscribe/latest/) library
 - Preprocesses data:
   - Normalizing SOAP data
