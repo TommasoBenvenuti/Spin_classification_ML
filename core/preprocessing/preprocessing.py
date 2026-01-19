@@ -31,6 +31,13 @@ def scale_and_split_data(X, y_spin, TEST_SIZE, RANDOM_STATE, target_spin_values)
 
     # Binarizzazione
     # la classe positiva (1) è il primo valore in input in input.txt (viceversa lo 0)
+    # split train/test
+    # from S.O.F :
+    # This stratify parameter makes a split so that the proportion of values in the sample produced
+    # will be the same as the proportion of values provided by parameter stratify. If the original data
+    # contains 30 % of 0s and 70 % of 1s, then in the train and test set the random split ensure you mantain the 
+    # same proportions
+ 
     y_spin = (y_spin == target_spin_values[0]).astype(int)
     df_copy = pd.DataFrame(X)
 
