@@ -12,11 +12,11 @@ This repository contains a Python program to classify spin states in **first-row
   - Target metal ion
   - Spin states
   - Coordination number (4, 5, or 6)
-- Builds a dataset from the **OMOL25 dataset** (~4 million structures) [OMOL25](https://huggingface.co/facebook/OMol25)
+- Builds a dataset 'distilling' **OMOL25 dataset** (~4 million structures) [OMOL25](https://huggingface.co/facebook/OMol25)
 - Converts molecular structures into **SOAP descriptors** using the [DSCRIBE](https://singroup.github.io/dscribe/latest/) library
 - Preprocesses data:
   - Normalizing SOAP data
-  - Splitting into training and test sets (customizable percentage)
+  - Splitting into training and test sets 
 - Performs exploratory data analysis:
   - **PCA** 
   - **t-SNE**
@@ -33,10 +33,11 @@ This repository contains a Python program to classify spin states in **first-row
 - Performs spin-state classification using an **MLP**
 - Highly regularized architecture due to small datasets
 - Can work on **PCA-reduced data**
-- Supports **class-balanced training** (undersampling majority classes)
+- Supports **class-balanced training** (undersampling majority class)
 
 ---
 
 ## Usage
+- install dependencies in requirements.txt 
 - Change input parameters in input.txt
 - then simply: python3 main.py 
