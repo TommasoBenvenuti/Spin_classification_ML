@@ -41,7 +41,7 @@ def Multi_Layer_Perceptron(X_train, y_train, X_test, y_test, OUT_DIR):
     model.summary()
 
     # Compilazione e training
-    early_stopping = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
+    early_stopping = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True)
 
     model.compile(
         optimizer=tf.keras.optimizers.Adam(learning_rate=5e-4),
