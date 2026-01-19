@@ -31,15 +31,12 @@ def Multi_Layer_Perceptron(X_train, y_train, X_test, y_test, OUT_DIR):
     reg = l2(1e-4)
 
     model = Sequential([Flatten(input_shape=(X_train.shape[1], ))])
+    model.add(Dense(32, activation='relu', kernel_regularizer=reg, kernel_initializer='he_normal', use_bias=False))
+    model.add(BatchNormalization())
+    model.add(Dropout(0.3))
     model.add(Dense(16, activation='relu', kernel_regularizer=reg, kernel_initializer='he_normal', use_bias=False))
     model.add(BatchNormalization())
-    model.add(Dropout(0.35))
-    model.add(Dense(8, activation='relu', kernel_regularizer=reg, kernel_initializer='he_normal', use_bias=False))
-    model.add(BatchNormalization())
-    model.add(Dropout(0.35))
-    model.add(Dense(8, activation='relu', kernel_regularizer=reg, kernel_initializer='he_normal', use_bias=False))
-    model.add(BatchNormalization())
-    model.add(Dropout(0.35))
+    model.add(Dropout(0.3))
     model.add(Dense(1, activation='sigmoid'))
     model.summary()
 
@@ -47,8 +44,8 @@ def Multi_Layer_Perceptron(X_train, y_train, X_test, y_test, OUT_DIR):
     early_stopping = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
 
     model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=9e-4),
-        loss=tf.keras.losses.BinaryCrossentropy(from_logits=False), #, label_smoothing = 0.05),
+        optimizer=tf.keras.optimizers.Adam(learning_rate=5e-4),
+        loss=tf.keras.losses.BinaryCrossentropy(from_logits=False, label_smoothing = 0.05),
         metrics=['accuracy']
     )
 
