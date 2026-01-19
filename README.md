@@ -18,7 +18,7 @@ This repository contains a Python program to classify spin states in **first-row
   - Normalizing SOAP data
   - Splitting into training and test sets (customizable percentage)
 - Performs exploratory data analysis:
-  - **PCA** (Principal Component Analysis)
+  - **PCA** 
   - **t-SNE**
   - **k-Means clustering**
 - Generates plots colored by spin state and dominant atom in the first coordination sphere
