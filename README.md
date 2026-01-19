@@ -23,6 +23,9 @@ This repository contains a Python program to classify spin states in **first-row
   - **k-Means clustering**
 - Generates plots colored by spin state and dominant atom in the first coordination sphere
 
+[tsne_spin_state.png] 
+[t-SNE_legante.png]
+
 ### 2. SVM and Random Forest Benchmark
 - Implements **Support Vector Machine (SVM)** classification:
   - Linear SVM
