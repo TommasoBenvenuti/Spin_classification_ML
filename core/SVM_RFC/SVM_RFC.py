@@ -96,3 +96,20 @@ def NON_NN(X_train, y_train, X_test, y_test, OUT_DIR):
     fig_rf.savefig(os.path.join(OUT_DIR, "confusion_matrix_randomforest.png"))
     plt.close(fig_rf)   
 
+    rf_model = rdn_clf.named_steps['rf_clf']  # estrai modello
+
+    # feature importance 
+    importances = rf_model.feature_importances_
+    with open(os.path.join(OUT_DIR, "rf_feature_importance.txt"), "w") as fh:
+      fh.write("Feature importance (Gini) per Random Forest\n")
+      for i, imp in enumerate(importances):
+        fh.write(f"Feature {i+1}: {imp:.6f}\n")
+
+    plt.figure(figsize=(10,4))
+    plt.bar(range(len(importances)), importances)
+    plt.xlabel("Feature index")
+    plt.ylabel("Importance")
+    plt.title("Random Forest Feature Importance")
+    plt.tight_layout()
+    plt.savefig(os.path.join(OUT_DIR, "rf_feature_importance.png"))
+    plt.close()
