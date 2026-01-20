@@ -147,7 +147,7 @@ def analyze_data(X_train, X_test,  y_spin_train, y_spin_test, train_index, ligan
     ax.set_title("Silhouette score vs number of cluster")
     plt.savefig(os.path.join(OUT_DIR,"s_score.png"), dpi=300)
     plt.close(fig)
-    # PCA colorata per cluster - VERSIONE CORRETTA
+    # PCA colorata per cluster 
     fig, ax = plt.subplots(figsize=(7,5))
 
     # prendo il primo valore sotto il quale trovo il 99 percento dei dati
