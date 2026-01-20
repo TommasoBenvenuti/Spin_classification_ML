@@ -22,6 +22,7 @@ This repository contains a Python program to classify spin states in **first-row
   - **t-SNE**
   - **k-Means clustering**
 - Generates plots colored by spin state and dominant atom in the first coordination sphere
+- Generates scree plot 
 
 ![t-SNE plot colored by spin state (HS is label with 1, LS with 0)](tsne_spin_state.png) 
 ![t-SNE plot colored by dominant atom in first sphere](t-SNE_legante.png)
@@ -31,12 +32,15 @@ This repository contains a Python program to classify spin states in **first-row
   - Linear SVM
   - Kernel SVM
 - Implements **Random Forest** classifier
+- Generates confusion matrix plots and .txt file containing information about classification metrix
 
 ### 3. Multi-Layer Perceptron (MLP)
 - Performs spin-state classification using an **MLP**
 - Highly regularized architecture due to small dataset
 - Can work on **PCA-reduced data**
 - Supports **class-balanced training** (undersampling majority class)
+- Generates confusion matrix plots and .txt file containing information about classification metrix
+- Generates validation accuracy and loss plots
 
 ---
 
