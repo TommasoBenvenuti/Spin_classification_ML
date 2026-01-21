@@ -80,6 +80,7 @@ def Multi_Layer_Perceptron(X_train, y_train, X_test, y_test, OUT_DIR):
     # Confusion Matrix
     
     # sono binari 0/1 quindi si dovrebbe poter fare
+    # quando calcola la roc varai in maniera uniforme questa soglia
     y_pred_prob = model.predict(X_test).ravel()
     y_pred = (y_pred_prob > 0.5).astype(int)
     
