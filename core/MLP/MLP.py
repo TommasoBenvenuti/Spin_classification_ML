@@ -43,7 +43,7 @@ def Multi_Layer_Perceptron(X_train, y_train, X_test, y_test, OUT_DIR):
 
     model.compile(
         optimizer=tf.keras.optimizers.SGD(learning_rate=1e-2),
-        loss=tf.keras.losses.BinaryCrossentropy(from_logits=False, label_smoothing = 0.05), 
+        loss=tf.keras.losses.BinaryCrossentropy(from_logits=False),  
         metrics=['accuracy']
     )
 
