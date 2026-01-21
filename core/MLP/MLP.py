@@ -42,7 +42,7 @@ def Multi_Layer_Perceptron(X_train, y_train, X_test, y_test, OUT_DIR):
     early_stopping = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True)
 
     model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=5e-4),
+        optimizer=tf.keras.optimizers.SGD(learning_rate=1e-2),
         loss=tf.keras.losses.BinaryCrossentropy(from_logits=False, label_smoothing = 0.05), 
         metrics=['accuracy']
     )
