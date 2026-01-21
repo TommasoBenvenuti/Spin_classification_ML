@@ -1,0 +1,5 @@
+Model: LinearSVC
+Accuracy:  0.845622
+Precision: 0.845982
+Recall:    0.845622
+F1-score:  0.845582

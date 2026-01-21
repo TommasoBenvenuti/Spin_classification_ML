@@ -1,0 +1,5 @@
+Model: RandomForest
+Accuracy:  0.781106
+Precision: 0.782118
+Recall:    0.781106
+F1-score:  0.780909
