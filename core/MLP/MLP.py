@@ -26,7 +26,7 @@ def Multi_Layer_Perceptron(X_train, y_train, X_test, y_test, OUT_DIR):
     """
 
     # Modello MLP
-    # la loss è somma della Loss del modello più somme su tutti i campioni dei quadrati degli elementi della matrice dei pesi
+    # L = L_mod + sum_i w_i^2
     # costringe il modello a fittare il modello mantenendo i pesi piccoli
     reg = l2(1e-4) 
 
