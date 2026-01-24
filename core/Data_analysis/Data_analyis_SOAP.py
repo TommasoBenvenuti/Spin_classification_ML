@@ -83,7 +83,7 @@ def analyze_data(X_train, X_test,  y_spin_train, y_spin_test, train_index, ligan
     tsne = TSNE(n_components=2, random_state=42, 
                 learning_rate='auto', init='pca', 
                 perplexity=30)
-    X_tsne = tsne.fit_transform(X_pca_train)
+    X_tsne = tsne.fit_transform(X_train)
 
     # -----------------
     # Cluster KMeans
