@@ -22,7 +22,7 @@ def NON_NN(X_train, y_train, X_test, y_test, OUT_DIR):
                     class_weight='balanced'))])
     # kernel: ; C : parametro che valuta quanto sono penalizzati gli errori di class.
     # gamma : per gaussiano, determina l'ampiezza della gaussiana del Kernel, 'scale'
-    # adatata ai dati e al numero di feature. calss weight: pesa i dati in base alla distribuzione delle classi
+    # adatata ai dati e al numero di feature. calss weight: pesa gl errori in base alla distribuzione delle classi
     svm_clf.fit(X_train, y_train)
     y_pred = svm_clf.predict(X_test)
 
