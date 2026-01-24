@@ -12,12 +12,11 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
 
 def NON_NN(X_train, y_train, X_test, y_test, OUT_DIR):
-    
     """ SVM and Random Forest Classifier for spin classification on SOAP data.
-    the function trains and evalueate SVM with gaussian kernel/linear (it is sufficient to change it at line 23)
+    the function trains and evalueate SVM with gaussian kernel/linear (it is sufficient to change it at line 20)
     and Random Forest Classifier on the provided training and testing data."""
 
-    #                       SVM gaussian kernel/linear 
+    #    SVM gaussian kernel/linear 
     svm_clf = Pipeline([('svc', SVC(kernel='rbf', C=1.0, gamma='scale',
                     class_weight='balanced'))])
     # kernel: ; C : parametro che valuta quanto sono penalizzati gli errori di class.
@@ -25,7 +24,6 @@ def NON_NN(X_train, y_train, X_test, y_test, OUT_DIR):
     # adatata ai dati e al numero di feature. calss weight: pesa gl errori in base alla distribuzione delle classi
     svm_clf.fit(X_train, y_train)
     y_pred = svm_clf.predict(X_test)
-
     # metriche di valutazione
     acc = accuracy_score(y_test, y_pred)
     prec = precision_score(y_test, y_pred, average='weighted', zero_division=0)
