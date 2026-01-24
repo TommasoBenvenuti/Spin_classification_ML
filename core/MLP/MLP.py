@@ -26,7 +26,7 @@ def Multi_Layer_Perceptron(X_train, y_train, X_test, y_test, OUT_DIR):
     """
 
     # Modello MLP
-    reg = l2(1e-4)
+    reg = l2(1e-4) # la loss è somma della Loss del modello più somme su tutti i campioni dei quadrati degli elementi della matrice dei pesi
 
     model = Sequential([Flatten(input_shape=(X_train.shape[1], ))])
     model.add(Dense(32, activation='relu', kernel_regularizer=reg, kernel_initializer='he_normal', use_bias=False))
