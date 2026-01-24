@@ -18,10 +18,10 @@ def Multi_Layer_Perceptron(X_train, y_train, X_test, y_test, OUT_DIR):
     Addestra e valuta un modello MLP sui dati SOAP per la classificazione dello stato di spin.
     
     Args:
-        X_train: Dati di addestramento 
-        y_train: Etichette di addestramento (eg stati di spin)
-        X_test: Dati di test
-        y_test: Etichette di test (eg stati di spin)
+        X_train: features 
+        y_train: label  (eg spin states)
+        X_test: test data
+        y_test: label (test set) 
         OUT_DIR: Cartella di output per salvare i risultati
     """
 
@@ -41,7 +41,7 @@ def Multi_Layer_Perceptron(X_train, y_train, X_test, y_test, OUT_DIR):
     # Compilazione e training
     early_stopping = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True)
 
-    model.compile(
+    model.compile( # logit sarebbero gli output grezzi, nel mio caso ho già la sigmoide quindi i risultati sono 0 o 1
         optimizer=tf.keras.optimizers.SGD(learning_rate=1e-2),
         loss=tf.keras.losses.BinaryCrossentropy(from_logits=False),  
         metrics=['accuracy']
