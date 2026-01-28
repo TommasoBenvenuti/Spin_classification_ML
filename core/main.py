@@ -24,9 +24,8 @@ from end_of_file import final_image
 
 # Set random seed for reproducibility per tutte le operazioni 
 RANDOM_STATE = 42
-# ----------------------------------------------------------------------
-#               extract input parameters from .txt
-# ----------------------------------------------------------------------
+
+#               extract input parameters from input.txt
 
 params = {} # dizionario di input
 
@@ -91,9 +90,7 @@ os.makedirs(OUT_DIR_DA, exist_ok=True)
 os.makedirs(OUT_DIR_ML, exist_ok=True)
 os.makedirs(OUT_DIR_SVM_RFC, exist_ok=True)
 
-# ----------------------------------------------------------------------
 #                           get data
-# ----------------------------------------------------------------------
 # se i dati sono già disponibili, ovvero non è la prima volta che testo il modello su un dato ione, non sto a crearer tutto il dataset
 # !!!!!!!!!!!!!!!!!!!!! Important !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 # data are extracted from omol25 dataset. the path is indicated in ./Data/extract/create_data.py 
@@ -139,7 +136,7 @@ else:
    X_train, X_test, y_train_spin, y_test_spin, train_index = scale_and_split_data(X, y_spin, TEST_SIZE, RANDOM_STATE, target_spin_values)
 
 ##         ---------------------     Analisi dati   ---------------------          ##
-## Analisi dati con PCA e t-SNE, k-means clustering e istogrammi. Complete info in ##
+## Analisi dati con PCA e t-SNE, k-means clustering               Complete info in ##
 ## function analyze_data in Data_analysis/Data_analyis_SOAP.py                     ##
 ## ------------------------------------------------------------------------------- ##
 
