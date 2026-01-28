@@ -59,7 +59,7 @@ def NON_NN(X_train, y_train, X_test, y_test, OUT_DIR):
 
     rdn_clf = Pipeline([
         ('rf_clf', RandomForestClassifier(n_estimators=250, max_depth=10,
-                                          min_samples_leaf=3, random_state=42,
+                                          random_state=42,
                                           n_jobs=-1, class_weight='balanced'))
     ])
 
