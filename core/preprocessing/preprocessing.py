@@ -56,7 +56,7 @@ def scale_and_split_data(X, y_spin, TEST_SIZE, RANDOM_STATE, target_spin_values)
     X_test      = X_test.values
     
 
-    # standardizzazione
+    # normakizzazione
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test  = scaler.transform(X_test)
