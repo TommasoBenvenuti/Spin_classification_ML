@@ -1,0 +1,21 @@
+#----------------------------------
+#Structural and electronic Variables
+#-----------------------------------
+spin_HS         = 6
+spin_LS         = 2
+target_coord_no = 6
+target_metal_z  = 26
+min_no_atoms    = 25 
+max_no_atoms    = 100
+soap_n_max      = 2
+soap_l_max      = 3
+cutoff          = 2.8
+#----------------------------------
+#              Model 
+#----------------------------------
+pca_target_variance    = 0.99
+use_balanced_data      = no
+data_already_extracted = yes
+convert_in_lowdim      = no
+test_size              = 0.2
+use_gpu                = no
