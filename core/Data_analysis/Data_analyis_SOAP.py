@@ -14,7 +14,7 @@ def analyze_data(X_train, X_test,  y_spin_train, y_spin_test, train_index, ligan
     pca and tsne are performed on the input features X_train to detect connecttion beetwen geometry and electronic properties.
     I prefer fitting pca just on train data, to avoid introducing any leakage. Plotting just train data I lose some info. 
     Data are plotted and figures saved in OUT_DIR. 
-    Histograms, PCA and TSNE colored by ligand ratios and dominant ligands are included.
+    PCA and TSNE colored by dominant ligands are included.
     
     args:
         X: soap features array
