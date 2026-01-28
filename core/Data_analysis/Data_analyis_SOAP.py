@@ -88,7 +88,7 @@ def analyze_data(X_train, X_test,  y_spin_train, y_spin_test, train_index, ligan
     # -----------------
     # Cluster KMeans
     # -----------------
-    # I prefer doing Kmeans clustering on pca data because my pc is suffering =/ . I hope it's the same
+    # I prefer doing Kmeans clustering on pca data because my pc is suffering =/ . I think it's the same because PCA simply rotates data
     # I check what is the best numbers that fit clusters
     # silhouette_score measurs how much points are closer to their cluster than to the others 
 
